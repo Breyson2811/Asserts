@@ -11,8 +11,7 @@ void ArrayStack<T>::push(T e){
 
 template<typename T>
 void ArrayStack<T>::pop(){
-  if(isEmpty())
-    return;
+  assert(!isEmpty());
   sp--;
 }
 
@@ -25,11 +24,13 @@ T ArrayStack<T>:: top(){
 template<typename T>
 bool ArrayStack<T>::isEmpty(){
   int numelements = sp-data;
+  assert(numelements >= 0)
   return numelements == 0;
 }
 
 template<typename T>
 void ArrayStack<T>:: resize(){
+  assert(FACTOR > 0);
   T new_data[] = new T[size + FACTOR];
   for(int i = 0; i < size; i++){
     new_data[i] = data[i];    
