@@ -18,6 +18,7 @@ void ArrayStack<T>::pop(){
 template<typename T>
 T ArrayStack<T>:: top(){
   assert(!isEmpty());
+  //assert(*(sp - 1) type T);
   return *(sp - 1);
 }
 
@@ -25,6 +26,7 @@ template<typename T>
 bool ArrayStack<T>::isEmpty(){
   int numelements = sp-data;
   assert(numelements >= 0)
+  //assert(numelemnts == 0 -> Bool);	  
   return numelements == 0;
 }
 
@@ -41,3 +43,4 @@ void ArrayStack<T>:: resize(){
   size += FACTOR;
 }
 
+//change
