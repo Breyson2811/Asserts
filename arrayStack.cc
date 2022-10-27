@@ -1,5 +1,5 @@
 #include "arrayStack.h"
-
+#include <assert.h>
 template<typename T>
 void ArrayStack<T>::push(T e){
   int numelements = sp-data;
@@ -11,7 +11,7 @@ void ArrayStack<T>::push(T e){
 
 template<typename T>
 void ArrayStack<T>::pop(){
-  if(empty())
+  if(isEmpty())
     return;
   sp--;
 }

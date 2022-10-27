@@ -2,9 +2,9 @@
 #define ARRAY_STACK_H
 #include "stack.h"
 
+#define FACTOR 10
 template<typename T>
-class ArrayStack: public stack<T>{
-
+class ArrayStack: public Stack<T>{
   private:
     T data[];
     int size; //memory size
